@@ -1,0 +1,14 @@
+.pagedButton {
+  background: #e27125;
+  height: 35px;
+  width: 35px;
+  border-radius: 5px;
+  color: antiquewhite;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.pagedButton:hover {
+  background: #ff7b00;
+  box-shadow: 0 0 10px #ff7b00, 0 0 40px #ff7b00, 0 0 80px #ff7b00;
+}

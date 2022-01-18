@@ -1,0 +1,63 @@
+
+.cards {
+  display: inline-flex;
+  width: 350px;
+}
+
+.option {
+  left: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  bottom: 2rem;
+  background-color: rgba(255, 89, 60, 0.966);
+  width: 100%;
+  height: 30px;
+  /* background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%); */
+}
+
+.body {
+  height: 600px;
+  top: 150px;
+  left: 300px;
+  overflow: scroll;
+  position: absolute;
+}
+
+.filter {
+  display:inline-flex;
+  position: auto;
+  margin-left: 2px;
+  margin-top: 4px;
+}
+
+.order {
+  height: 80px;
+  width: 150px;
+}
+
+.link {
+  width: 150px;
+}
+
+.source {
+  height: 80px;
+  width: 150px;
+}
+
+.resetDefault {
+  width: 150px;
+}
+
+.diets {
+  height: 300px;
+  width: 150px;
+}
+
+.pag-body {
+  width: 900px;
+}
+
+.pagination {
+  bottom: 30px;
+  left: 850px;
+}

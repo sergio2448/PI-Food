@@ -1,0 +1,64 @@
+.Home {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-size: 24px;
+  border-radius: 8px;
+  background-color: #d1c4e9;
+}
+
+.Fuente {
+  color: rgb(14, 13, 12);
+}
+
+.Landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  height: 48rem;
+  width: 63rem;
+  background-color: rgba(19, 15, 236, 0.3);
+  box-shadow: 10px 13px 47px 3px rgba(0, 0, 0, 0.71);
+  -webkit-box-shadow: 10px 13px 47px 3px rgba(0, 0, 0, 0.71);
+  -moz-box-shadow: 10px 13px 47px 3px rgba(0, 0, 0, 0.71);
+  background-image: linear-gradient(180deg, #2af598 0%, #009efd 100%);
+  background-size: contain;
+  border-radius: 20px;
+  position: relative;
+  opacity: 1;
+}
+
+.spoon {
+  border-radius: 20px;
+}
+
+.Cover {
+  /* align-items: stretch; */
+  display: flex;
+
+  /* position: absolute; */
+  /* top: 0; */
+  /* left: 0; */
+  /* right: 0; */
+  /* bottom: 0; */
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.Bar {
+  width: 100%;
+}
+
+.imges {
+  display: inline-flex;
+  align-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
