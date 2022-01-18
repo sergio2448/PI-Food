@@ -46,14 +46,6 @@ const Form = () => {
     );
   }
 
-  /*   function handleCheck(e) {
-    if(e.target.checked) {
-      setInput({
-        ...input,
-        diets: e.target.value
-      })
-    } */
-
   function handleSelect(e) {
     setInput({
       ...input,
@@ -76,13 +68,6 @@ const Form = () => {
     });
     history("/home");
   }
-
-  /*   function handleDelete(el) {
-    setInput({
-      ...input,
-      diets: input.diets.filter(diet => diet !== el)
-    })
-  } */
 
   useEffect(() => {
     dispatch(getDiets());
@@ -151,17 +136,6 @@ const Form = () => {
             onChange={handleChange}
           />
         </div>
-        {/* <div>
-          <label>Dietas: </label>
-          <label>
-            <input type="checkbox" value="gluten free" name="gluten free" onChange={e => handleCheck(e)}/>
-            gluten free
-          </label>
-          <label>
-            <input type="checkbox" value="vegan" name="vegan" onChange={e => handleCheck(e)}/>
-            vegan
-          </label>
-        </div> */}
         <select className="select" onChange={(e) => handleSelect(e)}>
           {diets.map((diet) => (
             <option value={diet.diets}>{diet.diets}</option>
@@ -173,12 +147,6 @@ const Form = () => {
         <br />
         <button type="submit">Crear receta</button>
       </form>
-      {/* {input.diets.map(el => 
-        <div>
-          <p>{el}</p>
-          <button onClick={() => handleDelete(el)}>x</button>
-        </div>
-        )} */}
     </div>
   );
 };

@@ -2,8 +2,6 @@ import React, { useRef, useEffect } from "react";
 import { Link } from 'react-router-dom'
 import './LandingPage.css'
 import img1 from "../../assets/fondolanding.jpg"
-/* import  img1  from "../../assets/1.jpg"; */
-/* import  img2  from "../../assets/2.jpg"; */
 import  img2  from "../../assets/anh-nguyen-_Uqj5BQb-mw-unsplash.jpg";
 import img3 from "../../assets/hamza-nouasria-SzJo-8Q5iD4-unsplash.jpg";
 import  img4  from "../../assets/gustavo-sanchez-pCney1f3G_A-unsplash.jpg";
@@ -50,7 +48,6 @@ export default function LandingPage() {
   };
 
   const prev = () => {
-    console.log(prev);
     if(slideshow.current.children.length > 0) {
       //Obtenemos el último elemento del slideshow.
       const index = slideshow.current.children.length - 1;
@@ -155,7 +152,7 @@ const Slide = styled.div`
   overflow: hidden;
   transition: 0.3s ease all;
   z-index: 10;
-  max-height: 500px;
+  max-height: 768px;
   position: relative;
 
   img {

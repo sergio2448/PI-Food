@@ -8,17 +8,6 @@ import spoonacular from '../../assets/spoonacular.png'
 
 
 
-function validate(id) {
-
-    if((id.length <= 6)&&(id.length > 0)) {
-        for(let i = 0; i < id.length; i++) {
-            if(!Number.isInteger(id[i] * 1)) return false
-        }
-    }else if( id.length < 36){
-        return false
-    }
-    return true
-}
 
 
 function Detail() {
@@ -31,7 +20,7 @@ function Detail() {
   
   useEffect(() => {
     console.log('entrando al useEffect')
-    if (validate(id1)) dispatch(getRecipesById(id1))
+     dispatch(getRecipesById(id1))
   }, [])
     
     return (
@@ -61,6 +50,10 @@ function Detail() {
                 <div className='summarysteps'>
                     <h3>Summary</h3>
                     <p dangerouslySetInnerHTML={{ __html: detail[0] && detail[0].summary }} />
+                </div>
+                <div className='summarysteps'>
+                    <h3>Pasos</h3>
+                    {detail[0] && detail[0].steps[0]?.map((step, index) => <p key={index} ><strong>Paso {index + 1}:</strong> {step.step}</p>)}
                 </div>
             </div>
         </div>

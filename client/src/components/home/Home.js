@@ -8,7 +8,7 @@ import {
   orderByTitle,
   orderByScore,
 } from "../../actions";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 import img4 from "../../assets/404-error.jpg";
 import "./Home.css";
 import Card from "../card/Card";
@@ -152,7 +152,7 @@ const Home = () => {
             </div>
           ))
         ) : (
-          <img src={img4} width='900px' height='500px' alt="not found" />
+          <img src={img4} width="900px" height="500px" alt="not found" />
         )}
       </div>
 
