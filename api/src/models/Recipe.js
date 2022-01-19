@@ -27,7 +27,7 @@ module.exports = (sequelize) => {
       allowNull: false
     },
     steps: {
-      type: DataTypes.JSON, // Ver analyzedInstructions
+      type: DataTypes.STRING, // Ver analyzedInstructions
       allowNull: true
     },
     image: {

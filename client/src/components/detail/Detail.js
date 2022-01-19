@@ -9,7 +9,6 @@ import spoonacular from '../../assets/spoonacular.png'
 
 
 
-
 function Detail() {
   console.log('entrando')
   const dispatch = useDispatch()
@@ -51,10 +50,10 @@ function Detail() {
                     <h3>Summary</h3>
                     <p dangerouslySetInnerHTML={{ __html: detail[0] && detail[0].summary }} />
                 </div>
-                <div className='summarysteps'>
+                {/* <div className='summarysteps'>
                     <h3>Pasos</h3>
-                    {detail[0] && detail[0].steps[0]?.map((step, index) => <p key={index} ><strong>Paso {index + 1}:</strong> {step.step}</p>)}
-                </div>
+                    {detail[0] && detail[0].steps[0] ? detail[0].steps[0]?.map((step, index) => <p key={index} ><strong>Paso {index + 1}:</strong> {step.step}</p>) : detail[0].steps}
+                </div> */}
             </div>
         </div>
     )

@@ -136,6 +136,16 @@ const Form = () => {
             onChange={handleChange}
           />
         </div>
+        <div>
+          <label>Pasos: </label>
+          <input
+            className="controls"
+            type="text"
+            value={input.steps}
+            name="steps"
+            onChange={handleChange}
+          />
+        </div>
         <select className="select" onChange={(e) => handleSelect(e)}>
           {diets.map((diet) => (
             <option value={diet.diets}>{diet.diets}</option>
@@ -144,7 +154,7 @@ const Form = () => {
         <ul>
           <li>{input.diets.map((e) => e + ", ")}</li>
         </ul>
-        <br />
+
         <button type="submit">Crear receta</button>
       </form>
     </div>

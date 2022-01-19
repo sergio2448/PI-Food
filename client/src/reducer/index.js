@@ -29,10 +29,25 @@ const rootReducer = (state = initialState, action) => {
         recipes: action.payload,
       };
     case "GET_RECIPES_BY_ID":
-      console.log(action.payload);
+      console.log("action.payload antes", action.payload);
+      console.log("action.payload id", action.payload[0].id);
+      //console.log('includes', action.payload[0].id?.includes("-"));
+      
+      if (typeof action.payload[0].id === 'string') {
+        action.payload[0].diets = action.payload[0].diets.map(
+          (diet) => diet.diets
+        );
+        var newActionPayload = action.payload;
+      } /* else {
+        const newPayload = action.payload;
+      } */
+      const newPayload = typeof action.payload[0].id === 'string' ? newActionPayload /* action.payload[0].diets = action.payload[0].diets.map(
+        (diet) => diet.diets
+        ) */ : action.payload
+        console.log("action.payload después", action.payload);
       return {
         ...state,
-        detail: action.payload,
+        detail: newPayload,
       };
     case "FILTER_BY_CREATED":
       const createdFilter =

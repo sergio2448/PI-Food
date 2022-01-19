@@ -156,8 +156,21 @@ router.get("/recipes/:id", async (req, res) => {
   const id = req.params.id;
   //const {id} = req.params;
   const recipesTotal = await getAllRecipes();
+  //console.log('recipesTotal', recipesTotal);
+ 
   if (id) {
-    let recipeId = await recipesTotal.filter((el) => el.id == id);
+    console.log('entrando al id');
+    
+    var recipeId = recipesTotal.filter((el) => el.id == id);
+    
+    /* if(id.includes('-')) {
+      console.log('recipePrueba1', recipeId[0].diets); 
+      //console.log('first', recipeId[0].diets);
+       recipeId[0].diets = recipeId[0].diets.map((diet) => diet.diets)
+       console.log('recipePrueba2', recipeId[0].diets);
+       console.log('recipePrueba3', recipeId[0]);
+    } */ 
+     
     recipeId.length
       ? res.status(200).json(recipeId)
       : res.status(400).send("No se encontró la receta");
