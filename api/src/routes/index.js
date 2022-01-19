@@ -51,7 +51,6 @@ const getAllRecipes = async () => {
 
 router.get("/recipes", async (req, res) => {
   const title = req.query.title;
-  console.log("Este es el title", req.params);
   let recipesTotal = await getAllRecipes();
   if (title) {
     let recipeName = recipesTotal.filter((recipe) =>
@@ -175,6 +174,6 @@ router.get("/recipes/:id", async (req, res) => {
       ? res.status(200).json(recipeId)
       : res.status(400).send("No se encontró la receta");
   }
-});
+}); 
 
 module.exports = router;

@@ -37,13 +37,11 @@ const rootReducer = (state = initialState, action) => {
         action.payload[0].diets = action.payload[0].diets.map(
           (diet) => diet.diets
         );
+        action.payload[0].steps = [[{ step: action.payload[0].steps }]]
         var newActionPayload = action.payload;
-      } /* else {
-        const newPayload = action.payload;
-      } */
-      const newPayload = typeof action.payload[0].id === 'string' ? newActionPayload /* action.payload[0].diets = action.payload[0].diets.map(
-        (diet) => diet.diets
-        ) */ : action.payload
+        console.log('newActionPayload', newActionPayload);
+      } 
+      const newPayload = typeof action.payload[0].id === 'string' ? newActionPayload : action.payload
         console.log("action.payload después", action.payload);
       return {
         ...state,

@@ -4,24 +4,23 @@ import { useParams } from 'react-router-dom';
 import { getRecipesById } from '../../actions/index.js';
 import './Detail.css';
 import NavBar from '../navBar/NavBar'
-import spoonacular from '../../assets/spoonacular.png'
+import spoonacular from '../../assets/spoonacular-sp.png'
 
 
 
 
 function Detail() {
-  console.log('entrando')
   const dispatch = useDispatch()
   const detail = useSelector((state) => state.detail) 
   const {id1} = useParams()
   console.log('detail', detail)
   console.log( 'id1', id1)
+  //console.log('pruebita', detail[0].steps);
   
   useEffect(() => {
     console.log('entrando al useEffect')
      dispatch(getRecipesById(id1))
-  }, [])
-    
+  },[])
     return (
         <div className="wrap">
             <div>
@@ -50,10 +49,10 @@ function Detail() {
                     <h3>Summary</h3>
                     <p dangerouslySetInnerHTML={{ __html: detail[0] && detail[0].summary }} />
                 </div>
-                {/* <div className='summarysteps'>
+                <div className='summarysteps'>
                     <h3>Pasos</h3>
-                    {detail[0] && detail[0].steps[0] ? detail[0].steps[0]?.map((step, index) => <p key={index} ><strong>Paso {index + 1}:</strong> {step.step}</p>) : detail[0].steps}
-                </div> */}
+                    {detail[0] && detail[0].steps[0]?.map((step, index) => <p key={index} ><strong>Paso {index + 1}:</strong> {step.step}</p>)}
+                </div>
             </div>
         </div>
     )

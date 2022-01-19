@@ -15,6 +15,7 @@ function validate(input) {
   } else if (input.healthScore > 100 || input.healthScore < 0) {
     errors.healthScore = "Se requiere un puntaje entre 0 y 100";
   }
+  
   return errors;
 }
 
@@ -55,6 +56,9 @@ const Form = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
+    console.log('errors', errors);
+    console.log('key', Object.keys(errors).length === 0);
+    if(Object.keys(errors).length === 0){
     dispatch(postRecipe(input));
     alert("Receta creada con éxito");
     setInput({
@@ -66,7 +70,7 @@ const Form = () => {
       image: "",
       diets: [],
     });
-    history("/home");
+    history("/home");} else {alert('Respuesta no válida')}
   }
 
   useEffect(() => {
@@ -75,9 +79,7 @@ const Form = () => {
 
   return (
     <div className="divForm">
-      <Link to="/home">
-        <button>Volver</button>
-      </Link>
+      
       <h1>Crear receta</h1>
       <form className="form-register" onSubmit={(e) => handleSubmit(e)}>
         <div>
@@ -155,7 +157,10 @@ const Form = () => {
           <li>{input.diets.map((e) => e + ", ")}</li>
         </ul>
 
-        <button type="submit">Crear receta</button>
+        <button type="submit" >Crear receta</button>
+        <Link to="/home">
+        <button>Volver</button>
+      </Link>
       </form>
     </div>
   );
