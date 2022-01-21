@@ -1,5 +1,4 @@
 import React, { useRef, useEffect } from "react";
-import { Link } from 'react-router-dom'
 import './LandingPage.css'
 import img1 from "../../assets/fondolanding.jpg"
 import  img2  from "../../assets/anh-nguyen-_Uqj5BQb-mw-unsplash.jpg";

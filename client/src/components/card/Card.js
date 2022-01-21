@@ -23,7 +23,7 @@ const Card = ({ image, title, diets, id1 }) => {
           <h3>{title}</h3>
         </div>
         <div>
-          <h3>{diets }</h3>
+          <h3>{`${diets } `} </h3>
         </div>
       </div>
     </div>

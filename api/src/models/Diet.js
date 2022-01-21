@@ -4,11 +4,9 @@ const { DataTypes } = require('sequelize');
 module.exports = (sequelize) => {
   // defino el modelo
   sequelize.define('diet', {
-    diets: { // ¿Inconsistencia en la API?
+    diets: {
       type: DataTypes.STRING,
       allowNull: false,
     }
   });
 };
-
-/* ENUM('gluten free','dairy free','lacto ovo vegetarian','vegan', 'paleolithic', 'primal', 'pescatarian', 'fodmap friendly', 'whole 30', 'vegetarian', 'ketogenic', 'lacto vegetarian', 'ovo vegetarian', 'pescetarian', 'paleo'), */

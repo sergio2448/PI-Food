@@ -7,7 +7,7 @@ function NavBar() {
   return (
     <header>
           <img
-            class="logo"
+            className="logo"
             src={spoonacular}
             alt="logo"
             height="50px"
@@ -22,7 +22,7 @@ function NavBar() {
           </li>
           <li>
             <Link to="/home">
-              <button>Home</button>
+              <button>Recetas</button>
             </Link>
           </li>
           <li>

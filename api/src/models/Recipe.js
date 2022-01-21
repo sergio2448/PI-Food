@@ -19,15 +19,15 @@ module.exports = (sequelize) => {
       allowNull: false
     },
     spoonacularScore: {
-      type: DataTypes.FLOAT, // ¿Entre 0 y 100?
+      type: DataTypes.FLOAT, 
       allowNull: true
     },
     healthScore: {
-      type: DataTypes.FLOAT, // ¿Entre 0 y 100?
+      type: DataTypes.FLOAT, 
       allowNull: false
     },
     steps: {
-      type: DataTypes.STRING, // Ver analyzedInstructions
+      type: DataTypes.STRING,
       allowNull: true
     },
     image: {

@@ -8,7 +8,6 @@ import {
   orderByTitle,
   orderByScore,
 } from "../../actions";
-import { Link } from "react-router-dom";
 import img4 from "../../assets/404-error.jpg";
 import "./Home.css";
 import Card from "../card/Card";
@@ -47,6 +46,7 @@ const Home = () => {
     e.preventDefault();
     console.log("handleFilterDiets", e.target.value);
     dispatch(getRecipesByDiet(e.target.value));
+    setCurrentPage(1);
   }
 
   function handleFilterCreated(e) {
@@ -138,7 +138,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div /* className='pag-body' */>
+      <div>
         {currentRecipes.length ? (
           currentRecipes.map((e, index) => (
             <div className="cards" key={index}>

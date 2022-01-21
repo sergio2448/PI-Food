@@ -29,6 +29,7 @@ const getApiInfo = async () => {
   return apiInfo;
 };
 
+
 const getDbInfo = async () => {
   console.log('entrando a getDbInfo')
   return await Recipe.findAll({
@@ -48,6 +49,7 @@ const getAllRecipes = async () => {
   const infoTotal = apiInfo.concat(dbInfo);
   return infoTotal;
 };
+
 
 router.get("/recipes", async (req, res) => {
   const title = req.query.title;
@@ -72,7 +74,7 @@ router.get("/types", async (req, res) => {
   const dietEach = diets.flat();
   console.log("dietEach", dietEach);
   const dietUnique = new Set(dietEach);
-  const backtoarray = [...dietUnique];
+  const backtoarray = [...dietUnique];   
   console.log("backtoarray", backtoarray);
   if (backtoarray.length) {
     console.log("Entra al if");
@@ -107,9 +109,6 @@ router.get("/filteredDiets/:diet", async (req, res) => {
   const diet = req.params.diet;
   const recipesAll = await getAllRecipes();
   if (diet) {
-    /* let recipeName = recipesAll.filter((recipe) =>
-      recipe.diets.find((e) => e === diet)
-    ); */
     let recipeName = recipesAll.filter((recipe) =>
     recipe.diets.includes(diet) || recipe.diets.map((e) => e.diets).includes(diet)
   );
@@ -153,22 +152,13 @@ router.post("/recipe", async (req, res) => {
 
 router.get("/recipes/:id", async (req, res) => {
   const id = req.params.id;
-  //const {id} = req.params;
   const recipesTotal = await getAllRecipes();
   //console.log('recipesTotal', recipesTotal);
  
   if (id) {
     console.log('entrando al id');
     
-    var recipeId = recipesTotal.filter((el) => el.id == id);
-    
-    /* if(id.includes('-')) {
-      console.log('recipePrueba1', recipeId[0].diets); 
-      //console.log('first', recipeId[0].diets);
-       recipeId[0].diets = recipeId[0].diets.map((diet) => diet.diets)
-       console.log('recipePrueba2', recipeId[0].diets);
-       console.log('recipePrueba3', recipeId[0]);
-    } */ 
+    var recipeId = recipesTotal.filter((el) => el.id == id); 
      
     recipeId.length
       ? res.status(200).json(recipeId)

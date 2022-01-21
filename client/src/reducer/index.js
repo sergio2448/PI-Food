@@ -51,7 +51,7 @@ const rootReducer = (state = initialState, action) => {
       const createdFilter =
         action.payload === "created"
           ? state.allRecipes.filter((db) => db.createdInDb)
-          : state.allRecipes.filter((db) => !db.createdInDb);
+          : action.payload === "api" ? state.allRecipes.filter((db) => !db.createdInDb) : state.allRecipes
       return {
         ...state,
         recipes: createdFilter,

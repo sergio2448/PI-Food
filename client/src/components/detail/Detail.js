@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector} from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { getRecipesById } from '../../actions/index.js';
@@ -15,7 +15,6 @@ function Detail() {
   const {id1} = useParams()
   console.log('detail', detail)
   console.log( 'id1', id1)
-  //console.log('pruebita', detail[0].steps);
   
   useEffect(() => {
     console.log('entrando al useEffect')
