@@ -12,22 +12,44 @@ const Card = ({ image, title, diets, id1 }) => {
     var diets = diets.map((diet) => diet.diets);
   }
   return (
-    <div className="cover">
-      <div className="image">
-        <Link to={`/detail/${id1}`}>
-          <img src={image} width="312px" height="231px" alt="not found" />
-        </Link>
-      </div>
-      <div className="foot">
-        <div>
-          <h3>{title}</h3>
-        </div>
-        <div>
-          <h3>{`${diets } `} </h3>
-        </div>
-      </div>
-    </div>
-  );
-};
+    <div className='container'>
 
-export default Card;
+      <div className='card'>
+        <div className='left-colum background1-left-column'>
+        <Link to={`/detail/${id1}`}>
+           <img width='auto' height='auto' src={image} alt="not found" />
+         </Link>
+          {/* <h6>{diets}</h6> */}
+          <h2>{title}</h2>
+          <i className='fa fa-github' aria-hidden='true'></i>
+        </div>
+        <div className='right-column'>
+          <div>
+            <h4>Dificultad</h4>
+            <h6>media - baja</h6>
+          </div>
+          <h2>{diets}</h2>
+          <p>Lorem ipsum dolor</p>
+          <button className='button'>Empezar</button>
+        </div>
+      </div>
+
+    </div>
+    );
+  };
+  
+  export default Card;
+  
+  /*  <div className="container">
+     <div className='card'>
+       <div className="imgBx">
+         <Link to={`/detail/${id1}`}>
+           <img src={image} alt="not found" />
+         </Link>
+       </div>
+       <div className="content">
+           <h3>{title}</h3>
+           <h3>{`${diets } `} </h3>
+       </div>
+     </div>
+   </div> */

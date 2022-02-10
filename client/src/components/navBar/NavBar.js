@@ -5,34 +5,23 @@ import spoonacular from "../../assets/spoonacular-sp.png";
 
 function NavBar() {
   return (
-    <header>
-          <img
-            className="logo"
-            src={spoonacular}
-            alt="logo"
-            height="50px"
-            width="50px"
-          />
+    <div>
       <nav>
-        <ul class="nav__links">
-          <li>
-            <Link to="/">
-              <button>Inicio</button>
-            </Link>
+        <ul className="nav-list">
+          <li className='nav-item'>
+            <a href='/'>Inicio</a>
           </li>
-          <li>
-            <Link to="/home">
-              <button>Recetas</button>
-            </Link>
+          <li className='nav-item'>
+            <a href='/home'>Recetas</a>
           </li>
-          <li>
+          <li className='nav-item'>
             <Link to="/form">
-              <button>Crear receta</button>
+              <button className='btn-primary'>Crear receta</button>
             </Link>
           </li>
         </ul>
       </nav>
-    </header>
+    </div>
   );
 }
 

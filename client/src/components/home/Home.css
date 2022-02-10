@@ -1,7 +1,9 @@
-
 .cards {
-  display: inline-flex;
-  width: 350px;
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5em;
+  padding-left: 25px;
 }
 
 .option {
@@ -15,13 +17,13 @@
   /* background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%); */
 }
 
-.body {
+/* .body {
   height: 600px;
   top: 150px;
   left: 300px;
   overflow: scroll;
   position: absolute;
-}
+} */
 
 .filter {
   display:inline-flex;
@@ -30,34 +32,34 @@
   margin-top: 4px;
 }
 
-.order {
+/* .order {
   height: 80px;
   width: 150px;
-}
+} */
 
-.link {
+/* .link {
   width: 150px;
-}
+} */
 
-.source {
+/* .source {
   height: 80px;
   width: 150px;
-}
+} */
 
-.resetDefault {
+/* .resetDefault {
   width: 150px;
-}
+} */
 
-.diets {
+/* .diets {
   height: 300px;
   width: 150px;
-}
+} */
 
-.pag-body {
+/* .pag-body {
   width: 900px;
-}
+} */
 
-.pagination {
+/* .pagination {
   bottom: 30px;
   left: 850px;
-}
+} */

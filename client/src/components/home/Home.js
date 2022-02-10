@@ -141,7 +141,7 @@ const Home = () => {
       <div>
         {currentRecipes.length ? (
           currentRecipes.map((e, index) => (
-            <div className="cards" key={index}>
+            <div className='cards' key={index}>
               <Card
                 image={e.image}
                 key={e.id}
@@ -152,7 +152,7 @@ const Home = () => {
             </div>
           ))
         ) : (
-          <img src={img4} width="900px" height="500px" alt="not found" />
+          "Cargando..."
         )}
       </div>
 

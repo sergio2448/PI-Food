@@ -4,9 +4,14 @@
   box-sizing: border-box;
 }
 
+body {
+  background-image: url(https://www.todofondos.net/wp-content/uploads/fondo-de-pantalla-de-alta-definicion-patron-de-grano-de-madera-de-roble-1920-%C3%97-1200.jpg);
+  background-size: 100%;
+}
+
 .form-register {
   width: 400px;
-  background: rgba(255, 123, 0, 0.993);
+  background: rgba(11, 221, 11, 0.452);
   padding: 30px;
   margin: auto;
   margin-top: 30px;

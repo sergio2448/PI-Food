@@ -1,64 +1,80 @@
-.Home {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  font-size: 24px;
-  border-radius: 8px;
-  background-color: #d1c4e9;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.Fuente {
-  color: rgb(14, 13, 12);
-}
-
-.Landing {
+header{
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(45deg, #796aa138, #685e8538), url(/home/sergio/Documents/HENRY/PI/PI-Food-main/client/src/assets/landp1.jpg);
+  background-size: cover;
+  background-position: center;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  text-align: center;
-  margin-top: auto;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: auto;
-  height: 48rem;
-  width: 63rem;
-  background-color: rgba(19, 15, 236, 0.3);
-  box-shadow: 10px 13px 47px 3px rgba(0, 0, 0, 0.71);
-  -webkit-box-shadow: 10px 13px 47px 3px rgba(0, 0, 0, 0.71);
-  -moz-box-shadow: 10px 13px 47px 3px rgba(0, 0, 0, 0.71);
-  background-image: linear-gradient(180deg, #2af598 0%, #009efd 100%);
-  background-size: contain;
-  border-radius: 20px;
-  position: relative;
-  opacity: 1;
+  padding: 30px 10%;
 }
 
-.spoon {
-  border-radius: 20px;
-}
-
-.Cover {
-  /* align-items: stretch; */
-  display: flex;
-
-  /* position: absolute; */
-  /* top: 0; */
-  /* left: 0; */
-  /* right: 0; */
-  /* bottom: 0; */
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: center;
-}
-
-.Bar {
-  width: 100%;
-}
-
-.imges {
-  display: inline-flex;
-  align-content: center;
-  flex-direction: column;
-  justify-content: space-between;
-  flex-wrap: nowrap;
+.landingPageContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: auto;
+  margin: 3rem;
+  width: 70vw;
+  background-color: var(--secondary-bg-color);
+  border-radius: 2rem;
   overflow: hidden;
+}
+
+.sectionLeft {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 6rem;
+  gap: 2rem;
+}
+
+.sectionLeft h1 {
+  font-size: 5em;
+  text-align: left;
+}
+.sectionLeft h2 {
+  margin-top: 1em;
+  font-size: 2em;
+}
+.sectionLeft p {
+  font-size: 1.5em;
+  text-align: left;
+  text-transform: none;
+}
+.buttonsContainer a{
+  display: inline-block;
+  background: #fff;
+  padding: 10px 15px;
+  border-radius: 40px;
+  text-decoration: none;
+  color: #626262;
+  font-weight: 700;
+}
+
+.sectionRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.sectionRight img {
+  width: 60%;
+}
+.sectionRight .img1 {
+  position: absolute;
+  right: -7%;
+}
+.sectionRight .img2 {
+  position: absolute;
+  bottom: -50%;
+  left: -10%;
 }
